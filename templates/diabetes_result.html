@@ -1,0 +1,15 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <link rel="stylesheet" href="{{url_for('static', filename='css/dia_result.css')}}">
+     <title>Diabetes Result</title>
+</head>
+<body>
+<div class="Result">
+<h1>Dear User,<br> {{answer}}</h1>
+    {%if answer=="We are sorry to inform you that you show signs of diabates." %}
+        <h2> <a href="{{ url_for('diab_symptoms')}}">For further support </a></h2>
+    {%endif%}
+</div>
+</body>
+</html>

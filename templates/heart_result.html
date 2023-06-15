@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <link rel="stylesheet" href="{{url_for('static', filename='css/heart_result.css')}}">
+    <title>Heart Result</title>
+</head>
+<body>
+<div class="Result" style="backgroundColor: yellow">
+<!--<h1>Result:- {{answer}}</h1>-->
+<h1>Dear User,<br> <span id="text"> </span></h1>
+
+<!--<div id="text"></div>-->
+     {%if answer== 1 %}
+        <h2> <a href="{{ url_for('heart_symptoms')}}">For further Support</a></h2>
+    {%endif%}
+
+<script>
+    text = document.getElementById('text')
+    if({{answer}} == 1){
+        text.innerHTML = " We are sorry to inform you that you are showing signs of heart diseases.<br>There is 91% of chances that you might have it.<br>No reasons to worry. Stay positive, and let's work together towards your healing 😊 "
+    }
+    else{
+        text.innerHTML = "We are glad to inform you that you don't show any signs of heart diseases.<br> There is 91% of chances that you don't have it.<br> No reasons to worry. Stay positive, and let's work together towards your healing 😊"
+    }
+</script>
+</body>
+</html>

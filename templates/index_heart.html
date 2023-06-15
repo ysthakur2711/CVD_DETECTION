@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/style_heart.css') }}">
+     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+   </head>
+<body>
+  <div class="container">
+    <div class="title">Cardio Diseases</div>
+    <div class="content">
+      <form action='/submit_heart' method="post" >
+        <div class="user-details">
+          <div class="input-box">
+            <span class="details">Age</span>
+            <input type="text" name="age" id="age" required>
+          </div>
+          <div class="input-box">
+            <span class="details">Chest Pain</span>
+            <input type="text" name="chestpain" id="chestpain" placeholder="on scale of 0-3" required>
+          </div>
+          <div class="input-box">
+            <span class="details">Resting Blood Pressure</span>
+            <input type="text" name="rbp" id="rbp" placeholder="eg. 80 mmHg" required>
+          </div>
+          <div class="input-box">
+            <span class="details">Serum Cholestrol</span>
+            <input type="text" name="sc" id="sc" placeholder="eg. 80 mg/dl" required>
+          </div>
+          <div class="input-box">
+            <span class="details">Fasting Blood Sugar</span>
+            <input type="text" name="fbs" id="fbs" placeholder="eg. 80 mg/dl" required>
+          </div>
+          <div class="input-box">
+            <span class="details">Resting ECG result</span>
+            <input type="text" name="rer" id="rer" required>
+          </div>
+          <div class="input-box">
+            <span class="details">Maximum Heart Rate acheived</span>
+            <input type="text" name="mhr" id="mhr" placeholder="eg. 80 bpm" required>
+          </div>
+          <div class="input-box">
+            <span class="details">Exercised Induced Angina</span>
+            <input type="text" name="eia" id="eia" required>
+          </div>
+          <div class="input-box">
+            <span class="details">ST depression induced by exercise</span>
+            <input type="text" name="std" id="std" required>
+          </div>
+          <div class="input-box">
+            <span class="details">Slope</span>
+            <input type="text" name="slope" id="slope" required>
+          </div>
+          <div class="input-box">
+            <span class="details">Major vessels</span>
+            <input type="text" name="mv" id="mv" required>
+          </div>
+          <div class="input-box">
+            <span class="details">Thal</span>
+            <input type="text" name="thal" id="thal" required>
+          </div>
+        </div>
+        <div class="gender-details">
+          <input type="radio" name="options" id="dot-1" value=1>
+          <input type="radio" name="options"  id="dot-2" value=0>
+          <input type="radio" name="options" id="dot-3">
+          <span class="gender-title">Gender</span>
+          <div class="category">
+            <label for="dot-1">
+            <span class="dot one"></span>
+            <span class="gender">Male</span>
+          </label>
+          <label for="dot-2">
+            <span class="dot two"></span>
+            <span class="gender">Female</span>
+          </label>
+          <label for="dot-3">
+            <span class="dot three"></span>
+            <span class="gender">Prefer not to say</span>
+            </label>
+          </div>
+        </div>
+        <div class="button">
+          <input type="submit" value="Predict">
+        </div>
+      </form>
+    </div>
+  </div>
+
+</body>
+</html>
